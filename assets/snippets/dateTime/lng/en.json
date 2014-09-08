@@ -1,0 +1,77 @@
+{
+  "am": "am",
+  "pm": "pm",
+  "AM": "AM",
+  "PM": "PM",
+  "Monday": "Monday",
+  "Mon": "Mon",
+  "Tuesday": "Tuesday",
+  "Tue": "Tue",
+  "Wednesday": "Wednesday",
+  "Wed": "Wed",
+  "Thursday": "Thursday",
+  "Thu": "Thu",
+  "Friday": "Friday",
+  "Fri": "Fri",
+  "Saturday": "Saturday",
+  "Sat": "Sat",
+  "Sunday": "Sunday",
+  "Sun": "Sun",
+  "January": "January",
+  "Jan": "Jan",
+  "February": "February",
+  "Feb": "Feb",
+  "March": "March",
+  "Mar": "Mar",
+  "April": "April",
+  "Apr": "Apr",
+  "May": "May",
+  "June": "June",
+  "Jun": "Jun",
+  "July": "July",
+  "Jul": "Jul",
+  "August": "August",
+  "Aug": "Aug",
+  "September": "September",
+  "Sep": "Sep",
+  "October": "October",
+  "Oct": "Oct",
+  "November": "November",
+  "Nov": "Nov",
+  "December": "December",
+  "Dec": "Dec",
+  "st": "st",
+  "nd": "nd",
+  "rd": "rd",
+  "th": "th",
+  "y": [
+    "year",
+    "years",
+    "years"
+  ],
+  "m": [
+    "month",
+    "months",
+    "months"
+  ],
+  "d": [
+    "day",
+    "days",
+    "days"
+  ],
+  "h": [
+    "hour",
+    "hours",
+    "hours"
+  ],
+  "i": [
+    "minute",
+    "minutes",
+    "minutes"
+  ],
+  "s": [
+    "second",
+    "seconds",
+    "seconds"
+  ]
+}
