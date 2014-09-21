@@ -43,6 +43,7 @@ if(!function_exists('declOfNum')) {
 
 $lngFile = trim(MODX_BASE_PATH .  "/") . "/" . $locPath . $lng . ".json";
 
+// read local lang file
 if(is_readable($lngFile)) {
     
     $translate = file_get_contents($lngFile);
@@ -55,11 +56,21 @@ if(is_readable($lngFile)) {
 
 }
 
+// init $date
+if(is_numeric($date) && strlen($date) == 10) {
+    $dateStart = dateTime::createFromFormat('U', $date);        
+} else {
+    $dateStart = new dateTime($date);        
+}
+
 
 if($date2) {
 
-    $dateStart = new dateTime($date);
-    $dateEnd = new dateTime($date2);
+    if(is_numeric($date2) && strlen($date2) == 10) {
+        $dateEnd = dateTime::createFromFormat('U', $date2);        
+    } else {
+        $dateEnd = new dateTime($date2);        
+    }
 
     $diffArr = $dateStart->diff($dateEnd); // ['y', 'm', 'd', 'h', 'i', 's', 'days']
 
@@ -67,9 +78,7 @@ if($date2) {
 
 } else {
 
-    $dateStart = new dateTime($date);
-    
-    if( ( strpos($format, 'M') !== false ) && ( $lng == 'ua' ) ) { $translate['May'] = 'Трав'; }
+    if( ( strpos($format, 'M') !== false ) && ( $lng == 'ua' ) ) { $translate['May'] = 'Трав'; } // transform to UA month local name 
     
     $out = ($lng != 'en') ? str_ireplace(array_keys($translate), array_values($translate), $dateStart->format($format)) : $dateStart->format($format);
 
